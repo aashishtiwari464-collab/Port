@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane Doe | Data Analyst Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #cbd5e1; /* Slate 300 */
+        }
+        .hero-bg {
+             background-color: #0f172a;
+             background-image: radial-gradient(#1e293b 1px, transparent 1px);
+             background-size: 20px 20px;
+        }
+        .project-card {
+            border: 1px solid #1e293b; /* Slate 800 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+        .skill-tag {
+            transition: background-color 0.3s;
+        }
+        .skill-tag:hover {
+            background-color: #334155; /* Slate 700 */
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #38bdf8; /* Sky 400 */
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .btn-primary {
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .btn-primary:hover {
+            background-color: #0284c7; /* Sky 600 */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-slate-900/70 backdrop-blur-sm fixed w-full z-20 top-0 border-b border-slate-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white">Jane Doe | Data Analyst</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="nav-link text-slate-300 hover:text-white">About</a>
+                <a href="#projects" class="nav-link text-slate-300 hover:text-white">Projects</a>
+                <a href="#contact" class="nav-link text-slate-300 hover:text-white">Contact</a>
+                <!-- DEVIL'S ADVOCATE NOTE: A raw Google Drive link is unprofessional and prone to permission errors that will cost you interviews.
+                     Host a proper PDF file and link to it directly. This is a critical point of failure. -->
+                <a href="https://drive.google.com/file/d/1ThTfRC5hWnQXG0qfySden1lLkvroVrKF/view?usp=drivesdk" target="_blank" class="bg-sky-500 text-white px-4 py-2 rounded-md text-sm font-semibold btn-primary">Download Resume</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+        </nav>
+         <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#about" class="block py-2 text-slate-300 hover:text-white">About</a>
+            <a href="#projects" class="block py-2 text-slate-300 hover:text-white">Projects</a>
+            <a href="#contact" class="block py-2 text-slate-300 hover:text-white">Contact</a>
+            <a href="https://drive.google.com/file/d/1ThTfRC5hWnQXG0qfySden1lLkvroVrKF/view?usp=drivesdk" target="_blank" class="block text-center bg-sky-500 text-white px-4 py-2 rounded-md font-semibold btn-primary mt-2">Download Resume</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-bg pt-32 pb-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
+                    Driving Business Growth with Data-Driven Insights
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-8">
+                    I transform complex datasets into actionable strategies that solve real-world business problems, optimize processes, and uncover hidden opportunities.
+                </p>
+                <a href="#projects" class="bg-sky-500 text-white font-bold py-3 px-8 rounded-full text-lg btn-primary inline-block">
+                    View My Work
+                </a>
+            </div>
+        </section>
+
+        <!-- About & Skills Section -->
+        <section id="about" class="py-24 bg-slate-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">About Me</h2>
+                    <div class="w-24 h-1 bg-sky-500 mx-auto mt-4"></div>
+                </div>
+                <div class="max-w-4xl mx-auto text-center text-slate-300 text-lg mb-12">
+                    <p class="mb-4">
+                        I am a detail-oriented Data Analyst with a passion for uncovering the stories hidden within data. My experience lies in statistical analysis, data visualization, and predictive modeling. I thrive in collaborative environments, translating complex analytical findings into clear, concise recommendations for stakeholders at all levels.
+                    </p>
+                    <p>
+                        My goal is to not only answer the "what" but to explain the "why," providing the crucial context that empowers intelligent decision-making.
+                    </p>
+                </div>
+                
+                <div class="max-w-5xl mx-auto">
+                    <h3 class="text-2xl font-bold text-white text-center mb-8">Core Competencies & Tools</h3>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="skill-tag bg-slate-800 text-sky-300 px-4 py-2 rounded-full font-medium">Python (Pandas, NumPy, Scikit-learn)</span>
+                        <span class="skill-tag bg-slate-800 text-sky-300 px-4 py-2 rounded-full font-medium">SQL</span>
+                        <span class="skill-tag bg-slate-800 text-sky-300 px-4 py-2 rounded-full font-medium">Tableau</span>
+                        <span class="skill-tag bg-slate-800 text-sky-300 px-4 py-2 rounded-full font-medium">Power BI</span>
+                        <span class="skill-tag bg-slate-800 text-sky-300 px-4 py-2 rounded-full font-medium">Excel</span>
+                        <span class="skill-tag bg-slate-800 text-sky-300 px-4 py-2 rounded-full font-medium">Statistical Analysis</span>
+                        <span class="skill-tag bg-slate-800 text-sky-300 px-4 py-2 rounded-full font-medium">Data Visualization</span>
+                        <span class="skill-tag bg-slate-800 text-sky-300 px-4 py-2 rounded-full font-medium">A/B Testing</span>
+                        <span class="skill-tag bg-slate-800 text-sky-300 px-4 py-2 rounded-full font-medium">Communication</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Project Case Studies</h2>
+                    <div class="w-24 h-1 bg-sky-500 mx-auto mt-4"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Project Card 1 -->
+                    <div class="project-card bg-slate-800 rounded-lg overflow-hidden flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-bold text-white mb-2">E-commerce Customer Churn Prediction</h3>
+                            <p class="text-slate-400 mb-4 text-sm">
+                                Developed a classification model to identify customers at high risk of churn, enabling targeted retention campaigns that led to a <strong>15% reduction in churn</strong>.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Python</span>
+                                <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Scikit-learn</span>
+                                <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">SQL</span>
+                            </div>
+                        </div>
+                        <div class="bg-slate-700/50 p-4 flex justify-end space-x-4">
+                            <a href="#" class="text-slate-300 hover:text-sky-400 transition-colors" title="View Case Study">Full Case Study <i class="fas fa-arrow-right ml-1"></i></a>
+                            <a href="#" target="_blank" class="text-slate-300 hover:text-sky-400 transition-colors" title="View Code on GitHub"><i class="fab fa-github fa-lg"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card bg-slate-800 rounded-lg overflow-hidden flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-bold text-white mb-2">Sales Performance Dashboard</h3>
+                            <p class="text-slate-400 mb-4 text-sm">
+                                Created an interactive Tableau dashboard to track KPIs, providing the sales team with real-time insights that helped <strong>increase sales efficiency by 10%</strong>.
+                            </p>
+                             <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Tableau</span>
+                                <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">SQL</span>
+                                <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Data Cleaning</span>
+                            </div>
+                        </div>
+                        <div class="bg-slate-700/50 p-4 flex justify-end space-x-4">
+                             <!-- DEVIL'S ADVOCATE NOTE: This is a FATAL FLAW. A dashboard project must link to an INTERACTIVE dashboard (Tableau Public, PowerBI online, etc).
+                                  Linking to a static file proves nothing and breaks the user's expectation. This MUST be fixed. -->
+                             <a href="https://drive.google.com/file/d/1zsM8xI5r5n16HCD2cdDG5DOEi-wZVxpI/view?usp=drivesdk" class="text-slate-300 hover:text-sky-400 transition-colors" title="View Dashboard File">View Static File <i class="fas fa-arrow-right ml-1"></i></a>
+                             <a href="#" target="_blank" class="text-slate-300 hover:text-sky-400 transition-colors" title="View Documentation"><i class="fas fa-file-alt fa-lg"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card bg-slate-800 rounded-lg overflow-hidden flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-bold text-white mb-2">Website A/B Test Analysis</h3>
+                            <p class="text-slate-400 mb-4 text-sm">
+                                Conducted a statistical analysis of an A/B test for a new checkout flow, delivering a clear recommendation that resulted in a <strong>5% uplift in conversion rate</strong>.
+                            </p>
+                             <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Python</span>
+                                <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Statistics</span>
+                                <span class="bg-sky-500/20 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded-full">Matplotlib</span>
+                            </div>
+                        </div>
+                        <div class="bg-slate-700/50 p-4 flex justify-end space-x-4">
+                            <a href="#" class="text-slate-300 hover:text-sky-400 transition-colors" title="View Analysis">Read The Analysis <i class="fas fa-arrow-right ml-1"></i></a>
+                            <a href="#" target="_blank" class="text-slate-300 hover:text-sky-400 transition-colors" title="View Code on GitHub"><i class="fab fa-github fa-lg"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-slate-900">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                     <h2 class="text-3xl md:text-4xl font-bold text-white">Let's Connect</h2>
+                     <div class="w-24 h-1 bg-sky-500 mx-auto mt-4"></div>
+                    <p class="my-8 text-lg text-slate-300">I'm currently seeking new opportunities and would love to discuss how my skills in data analysis can contribute to your team's success. Feel free to reach out!</p>
+                    <a href="mailto:your.email@example.com" class="inline-block bg-sky-500 text-white font-bold py-3 px-8 rounded-full text-lg btn-primary mb-8">
+                        Get In Touch
+                    </a>
+                    <div class="flex justify-center space-x-6">
+                        <a href="#" target="_blank" class="text-slate-400 hover:text-sky-400 transition-colors" title="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="#" target="_blank" class="text-slate-400 hover:text-sky-400 transition-colors" title="GitHub"><i class="fab fa-github fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-6">
+        <div class="container mx-auto px-6 text-center text-slate-500">
+            <p>&copy; 2025 Jane Doe. Built with Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuIcon = mobileMenuButton.querySelector('i');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenuIcon.classList.remove('fa-times');
+                    mobileMenuIcon.classList.add('fa-bars');
+                } else {
+                    mobileMenuIcon.classList.remove('fa-bars');
+                    mobileMenuIcon.classList.add('fa-times');
+                }
+            });
+
+             // Close mobile menu on link click
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuIcon.classList.remove('fa-times');
+                    mobileMenuIcon.classList.add('fa-bars');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
